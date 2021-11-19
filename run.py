@@ -44,3 +44,11 @@ def print_board(values):
     print("\t  {}  |  {}  |  {}".format(values[6], values[7], values[8]))
     print("\t     |     |")
     print("\n")
+
+# Code for available moves
+def available_moves(self):
+    moves = []
+    for (i, spot) in enumerate(self.board):
+        if x == ' ':
+            moves.append(i)
+    return moves
