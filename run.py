@@ -49,6 +49,6 @@ def print_board(values):
 def available_moves(self):
     moves = []
     for (i, spot) in enumerate(self.board):
-        if x == ' ':
+        if spot == ' ':
             moves.append(i)
     return moves
