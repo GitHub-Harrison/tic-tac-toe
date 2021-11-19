@@ -40,54 +40,56 @@ class HumanPlayer(Player):
                 print("Invalid square. Please try again.")
         return val
 
-# Code for the board
-def print_board(values):
-    print("\n")
-    print("\t     |     |")
-    print("\t  {}  |  {}  |  {}".format(values[0], values[1], values[2]))
-    print('\t_____|_____|_____')
- 
-    print("\t     |     |")
-    print("\t  {}  |  {}  |  {}".format(values[3], values[4], values[5]))
-    print('\t_____|_____|_____')
- 
-    print("\t     |     |")
- 
-    print("\t  {}  |  {}  |  {}".format(values[6], values[7], values[8]))
-    print("\t     |     |")
-    print("\n")
+class TicTacToe:
 
-# Code for available moves
-def available_moves(self):
-    moves = []
-    for (i, spot) in enumerate(self.board):
-        if spot == ' ':
-            moves.append(i)
-    return moves
+    # Code for the board
+    def print_board(values):
+        print("\n")
+        print("\t     |     |")
+        print("\t  {}  |  {}  |  {}".format(values[0], values[1], values[2]))
+        print('\t_____|_____|_____')
+    
+        print("\t     |     |")
+        print("\t  {}  |  {}  |  {}".format(values[3], values[4], values[5]))
+        print('\t_____|_____|_____')
+    
+        print("\t     |     |")
+    
+        print("\t  {}  |  {}  |  {}".format(values[6], values[7], values[8]))
+        print("\t     |     |")
+        print("\n")
 
-# Code to check empty squares
-def empty_squares(self):
-    return " " in self.board
+    # Code for available moves
+    def available_moves(self):
+        moves = []
+        for (i, spot) in enumerate(self.board):
+            if spot == ' ':
+                moves.append(i)
+        return moves
 
-def num_empty_squares(self):
-    return self.board.count(" ")
+    # Code to check empty squares
+    def empty_squares(self):
+        return " " in self.board
 
-def make_move(self, square, letter):
-    # if valid, make move (assign letter to square)
-    if self.board[square] == " ":
-        self.board[square] = letter
-        if self.winner(square, letter):
-            self.current_winner = letter
-        return True
-    return False
+    def num_empty_squares(self):
+        return self.board.count(" ")
 
-def winner(self, square, letter):
-    # winner if 3 in a row, all winning combos
-    solution = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
-    for x in solution:
-        if all([spot == letter for spot in x]):
+    def make_move(self, square, letter):
+        # if valid, make move (assign letter to square)
+        if self.board[square] == " ":
+            self.board[square] = letter
+            if self.winner(square, letter):
+                self.current_winner = letter
             return True
-    return False
+        return False
+
+    def winner(self, square, letter):
+        # winner if 3 in a row, all winning combos
+        solution = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
+        for x in solution:
+            if all([spot == letter for spot in x]):
+                return True
+        return False
 
 def play(game, x_player, o_player, print_game=True):
     if print_game:
