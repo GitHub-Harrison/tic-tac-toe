@@ -127,4 +127,4 @@ def play(game, x_player, o_player, print_game=True):
 if __name__ == '__main__':
     x_player = HumanPlayer('X')
     o_player = ComputerPlayer('O')
-    play(x_player, o_player, print_game=True)
+    play(x_player, o_player, print_game=True) # TypeError: play() missing 1 required positional argument: 'o_player'
