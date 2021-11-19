@@ -129,4 +129,14 @@ def play(game, x_player, o_player, print_game=True):
 if __name__ == '__main__':
     x_player = HumanPlayer('X')
     o_player = ComputerPlayer('O')
-    play(x_player, o_player, print_game=True) # TypeError: play() missing 1 required positional argument: 'o_player'
+    g = TicTacToe()
+    play(g, x_player, o_player, print_game=True) # TypeError: play() missing 1 required positional argument: 'o_player'
+
+# New error
+#   File "run.py", line 133, in <module>
+#     play(g, x_player, o_player, print_game=True)
+#   File "run.py", line 96, in play
+#     game.print_board()
+#   File "run.py", line 49, in print_board
+#     print("\t  {}  |  {}  |  {}".format(values[0], values[1], values[2]))
+# TypeError: 'TicTacToe' object is not subscriptable
