@@ -71,6 +71,13 @@ def empty_squares(self):
 def num_empty_squares(self):
     return self.board.count(" ")
 
+def make_move(self, square, letter):
+    # if valid, make move (assign letter to square)
+    if self.board[square] == " ":
+        self.board[square] = letter
+        return True
+    return False
+
 def play(game, x_player, o_player, print_game=True):
     if print_game:
         game.print_board()
@@ -78,4 +85,21 @@ def play(game, x_player, o_player, print_game=True):
     letter = "X" # starting letter
 
     while game.empty_squares():
-        pass
+        # get the move from the player
+        if letter == "O":
+            square = o_player.get_move(game)
+        else:
+            square = x_player.get_move(game)
+        
+        # function to make a move
+        if game.make_move(square, letter):
+            if print_game:
+                print(letter + f" makes a move to square {square}")
+                game.print_board()
+                print(" ")
+                
+            # after the move is made, the player letter switches
+            if letter == 'X':
+                letter = 'O'
+            else:
+                letter = 'X'
