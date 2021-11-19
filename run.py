@@ -75,7 +75,17 @@ def make_move(self, square, letter):
     # if valid, make move (assign letter to square)
     if self.board[square] == " ":
         self.board[square] = letter
+        if self.winner(square, letter):
+            self.current_winner = letter
         return True
+    return False
+
+def winner(self, square, letter):
+    # winner if 3 in a row, all winning combos
+    solution = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
+    for x in solution:
+        if all([spot == letter for spot in x]):
+            return True
     return False
 
 def play(game, x_player, o_player, print_game=True):
@@ -97,9 +107,18 @@ def play(game, x_player, o_player, print_game=True):
                 print(letter + f" makes a move to square {square}")
                 game.print_board()
                 print(" ")
-                
+
+            # check for winner
+            if game.current_winner:
+                if print_game:
+                    print(letter + "has won!")
+                return letter
+
             # after the move is made, the player letter switches
             if letter == 'X':
                 letter = 'O'
             else:
                 letter = 'X'
+        
+        if print_game:
+            print("It's a Tie!")
