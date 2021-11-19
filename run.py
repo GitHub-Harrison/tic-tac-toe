@@ -9,7 +9,7 @@ class Player:
 
     # for players to get their next move
     def get_move(self, game):
-        pass # Continue this later
+        pass
 
 # Code for computer player
 class ComputerPlayer(Player):
@@ -29,7 +29,7 @@ class HumanPlayer(Player):
     def get_move(self, game):
         valid_square = False
         val = None
-        While not valid_square:
+        while not valid_square:
             square = input(self.letter + "'s turn. Enter move (0-8):")
             try:
                 val = int(square)
@@ -65,6 +65,7 @@ def available_moves(self):
             moves.append(i)
     return moves
 
+# Code to check empty squares
 def empty_squares(self):
     return " " in self.board
 
@@ -122,3 +123,8 @@ def play(game, x_player, o_player, print_game=True):
         
         if print_game:
             print("It's a Tie!")
+
+if __name__ == '__main__':
+    x_player = HumanPlayer('X')
+    o_player = ComputerPlayer('O')
+    play(x_player, o_player, print_game=True)
