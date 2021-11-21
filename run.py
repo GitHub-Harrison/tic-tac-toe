@@ -48,13 +48,13 @@ class TicTacToe:
     def print_board(self):
         print("\n")
         print("\t     |     |")
-        # print("\t  {}  |  {}  |  {}")
+        print("\t  {} |  {} |  {} ")
         print('\t_____|_____|_____')
         print("\t     |     |")
-        # print("\t  {}  |  {}  |  {}")
+        print("\t  {} |  {} |  {} ")
         print('\t_____|_____|_____')
         print("\t     |     |")
-        # print("\t  {}  |  {}  |  {}")
+        print("\t  {} |  {} |  {} ")
         print("\t     |     |")
         print("\n")
 
