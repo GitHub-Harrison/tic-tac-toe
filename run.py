@@ -1,10 +1,19 @@
 import random
+from os import system, name
 board = ["-", "-", "-",
         "-", "-", "-",
         "-", "-", "-"]
 current_player = "X"
 current_winner = None
 game_running = True
+
+
+def clear():
+    """
+    Function to clear the screen
+    """
+    os.system("cls" if os.name == "nt" else "clear")
+
 
 # print the game board
 def print_board(board):
@@ -13,15 +22,17 @@ def print_board(board):
     print(board[3] + " | " + board[4] + " | " + board[5])
     print("----------")
     print(board[6] + " | " + board[7] + " | " + board[8])
-print_board(board)
+
 
 # take player input
 def playerInput(board):
+    # change to while loop for until user enter number 1-9
     pinput = int(input("Enter a number 1-9: "))
     if pinput >= 1 and pinput <= 9 and board[pinput-1] == "-":
         board[pinput-1] = current_player
     else:
         print("A player is already in that spot.")
+
 
 # check for win or tie
 def check_hor(board):
@@ -36,6 +47,7 @@ def check_hor(board):
         current_winner = board[6]
         return True
 
+
 def check_vert(board):
     global current_winner
     if board[0] == board[3] == board[6] and board[0] != "-":
@@ -48,6 +60,7 @@ def check_vert(board):
         current_winner = board[2]
         return True
 
+
 def check_diag(board):
     global current_winner
     if board[0] == board[4] == board[8] and board[0] != "-":
@@ -57,15 +70,18 @@ def check_diag(board):
         current_winner = board[2]
         return True
 
+
 def check_tie(board):
     if "-" not in board:
         print_board(board)
         print("The game ends in a Tie!")
         game_running = False
 
+
 def check_win():
     if check_hor(board) or check_vert(board) or check_diag(board):
         print(f"{current_winner} has won this game!")
+
 
 # switch the player
 def switch_player():
@@ -75,6 +91,7 @@ def switch_player():
     else:
         current_player = "X"
 
+
 # computer player
 def computer_player(board):
     while current_player == "O":
@@ -83,12 +100,13 @@ def computer_player(board):
             board[pos] = "O"
             switch_player()
 
+
 # Find a way to clean this up
 while game_running:
     print_board(board)
     playerInput(board)
-    check_win()
-    check_tie(board)
+    # check_win()
+    # check_tie(board)
     switch_player()
     computer_player(board)
     check_win()
@@ -97,3 +115,4 @@ while game_running:
 # Game doesn't stop after a winner is declared
 # Change X, O to a different icon
 # Add gameover screen at the end?
+# Add menu screen
