@@ -1,8 +1,9 @@
-import math
 import random
+
 
 # Code for the players Human/Computer
 class Player:
+
     def __init__(self, letter):
         # letter is X or O
         self.letter = letter
@@ -13,6 +14,7 @@ class Player:
 
 # Code for computer player
 class ComputerPlayer(Player):
+
     def __init__(self, letter):
         super().__init__(letter)
 
@@ -45,18 +47,21 @@ class TicTacToe:
         self.current_winner = None   # to keep track of the winner
 
     # Code for the board
+    def make_board():
+        return [" " for _ in range(9)]
+
     def print_board(self):
-        print("\n")
-        print("\t     |     |")
-        print("\t  {} |  {} |  {} ")
-        print('\t_____|_____|_____')
-        print("\t     |     |")
-        print("\t  {} |  {} |  {} ")
-        print('\t_____|_____|_____')
-        print("\t     |     |")
-        print("\t  {} |  {} |  {} ")
-        print("\t     |     |")
-        print("\n")
+        for row in [self.board[i*3:(i+1) * 3] for i in range(3)]:
+            print(" | " + " | ".join(row) + " | ")
+
+    def print_board_number():
+        """
+        Function to print numbers allowing users to see
+        where they can move to
+        """
+        number_board = [[str(i) for i in range(j * 3, (j+1) * 3)] for j in range(3)]
+        for row in number_board:
+            print(" | " + " | ".join(row) + " | ")
 
     # Code for available moves
     def available_moves(self):
@@ -82,18 +87,23 @@ class TicTacToe:
             return True
         return False
     # Below code is not detecing a win
+
     def winner(self, square, letter):
         # winner if 3 in a row, all winning combos
-        solution = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
+        solution = [[0, 1, 2], [3, 4, 5], [6, 7, 8], 
+            [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
         for x in solution:
             if all([spot == letter for spot in x]):
                 return True
         return False
 
 def play(game, x_player, o_player, print_game=True):
+
     if print_game:
         game.print_board()
-    letter = "X"   # starting letter
+
+    # starting letter
+    letter = "X"   
     while game.empty_squares():
         # get the move from the player
         if letter == "O":
@@ -102,28 +112,32 @@ def play(game, x_player, o_player, print_game=True):
             square = x_player.get_move(game)
         # function to make a move
         if game.make_move(square, letter):
+
             if print_game:
                 print(letter + f" makes a move to square {square}")
                 game.print_board()
                 print(" ")
+
             # check for winner
             if game.current_winner:
                 if print_game:
                     print(letter + "has won!")
                 return letter
+
             # after the move is made, the player letter switches
             if letter == 'X':
                 letter = 'O'
             else:
-                letter = 'X'      
+                letter = 'X'
+
     if print_game:
         print("It's a Tie!")
 
 if __name__ == '__main__':
     x_player = HumanPlayer('X')
     o_player = ComputerPlayer('O')
-    game = TicTacToe()
-    play(game, x_player, o_player, print_game=True)   
+    ttt = TicTacToe()
+    play(ttt, x_player, o_player, print_game=True)   
     # TypeError: play() missing 1 required positional argument: 'o_player'
 
 # New error
