@@ -77,10 +77,10 @@ def switch_player():
 
 # computer player
 def computer_player(board):
-    while current_player == "X":
+    while current_player == "O":
         pos = random.randint(0, 8)
         if board[pos] == "-":
-            board[pos] = "X"
+            board[pos] = "O"
             switch_player()
 
 # check for win or tie again
