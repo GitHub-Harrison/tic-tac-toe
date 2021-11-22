@@ -15,7 +15,10 @@ class Player:
 
 # Code for computer player
 class ComputerPlayer(Player):
-
+    """
+    Class that controls the computer player functions and
+    allows the computer to make random moves on the board
+    """
     def __init__(self, letter):
         super().__init__(letter)
 
@@ -25,10 +28,20 @@ class ComputerPlayer(Player):
 
 # Code for the human player
 class HumanPlayer(Player):
+    """
+    Human player class that controls everything related to
+    the users input
+    """
+    
     def __init__(self, letter):
         super().__init__(letter)
 
     def get_move(self, game):
+        """
+        get_move allows the player to make a move and checks if
+        the move the player wants is an available move as well as
+        checking the user input is correct
+        """
         valid_square = False
         val = None
         while not valid_square:
@@ -49,9 +62,16 @@ class TicTacToe:
 
     # Code for the board
     def make_board():
+        """
+        Function that creates the basic board layout 3x3 square
+        """
         return [" " for _ in range(9)]
 
     def print_board(self):
+        """
+        Creates the vertical breaks between the columns within
+        the board
+        """
         for row in [self.board[i*3:(i+1) * 3] for i in range(3)]:
             print(" | " + " | ".join(row) + " | ")
 
@@ -67,6 +87,10 @@ class TicTacToe:
 
     # Code for available moves
     def available_moves(self):
+        """
+        Function to check all possible available
+        moves left on the board
+        """
         moves = []
         for (i, spot) in enumerate(self.board):
             if spot == ' ':
@@ -75,13 +99,24 @@ class TicTacToe:
 
     # Code to check empty squares
     def empty_squares(self):
+        """
+        function to check what spots are
+        empty squares
+        """
         return " " in self.board
 
     def num_empty_squares(self):
+        """
+        This function is to check the number
+        of empty spots on the board
+        """
         return self.board.count(" ")
 
     def make_move(self, square, letter):
-        # if valid, make move (assign letter to square)
+        """
+        If the move given is a valid option,
+        the move will be made
+        """
         if self.board[square] == " ":
             self.board[square] = letter
             if self.winner(square, letter):
@@ -91,6 +126,10 @@ class TicTacToe:
 
     # Below code is not detecing a win
     def winner(self, square, letter):
+        """
+        Function which checks all possible winning
+        combonations and returns the result
+        """
         # check the row
         row_ind = math.floor(square / 3)
         row = self.board[row_ind*3:(row_ind+1)*3]
@@ -114,6 +153,9 @@ class TicTacToe:
         return False
 
 def play(game, x_player, o_player, print_game=True):
+    """
+    Main function that controls the running game
+    """
 
     if print_game:
         game.print_board_number()
