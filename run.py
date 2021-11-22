@@ -60,6 +60,39 @@ class HumanPlayer(Player):
         return val
 
 
+def main_menu():
+    """
+    Function for a main menu making it more obvious
+    to users that the code/game has started.
+    List of options containing: 
+    1) Play Game 2) How to play 3) About 4) Exit
+    """
+    choice = 0
+    while choice != "4":
+
+        print("\n Welcome to my Tic-Tac-Toe game!")
+        print()
+        print("Choose from this menu to continue.")
+        print()
+        print("1 - Play Game")
+        print("2 - How to play")
+        print("3 - About")
+        print("4 - Exit")
+        print()
+        choice = input("Enter your choice: ")
+        try:
+            if choice == "1":
+                TicTacToe()
+            elif choice == "2":
+                pass # Create how to play section
+            elif choice == "3":
+                pass # Create about section
+            elif choice == "4":
+                print("Thanks for playing!")
+        except ValueError:
+            print("Please enter a valid choice.")
+
+
 class TicTacToe:
     """
     Class containing all function required to run the game
@@ -214,4 +247,5 @@ if __name__ == '__main__':
     x_player = HumanPlayer('X')
     o_player = ComputerPlayer('O')
     ttt = TicTacToe()
+    main_menu()
     play(ttt, x_player, o_player, print_game=True)   
