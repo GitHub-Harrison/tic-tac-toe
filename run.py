@@ -83,8 +83,7 @@ def computer_player(board):
             board[pos] = "O"
             switch_player()
 
-# check for win or tie again
-
+# Find a way to clean this up
 while game_running:
     print_board(board)
     playerInput(board)
