@@ -1,5 +1,6 @@
 import random
-
+import math
+import time
 
 # Code for the players Human/Computer
 class Player:
@@ -54,6 +55,7 @@ class TicTacToe:
         for row in [self.board[i*3:(i+1) * 3] for i in range(3)]:
             print(" | " + " | ".join(row) + " | ")
 
+    @staticmethod
     def print_board_number():
         """
         Function to print numbers allowing users to see
@@ -86,21 +88,35 @@ class TicTacToe:
                 self.current_winner = letter
             return True
         return False
-    # Below code is not detecing a win
 
+    # Below code is not detecing a win
     def winner(self, square, letter):
-        # winner if 3 in a row, all winning combos
-        solution = [[0, 1, 2], [3, 4, 5], [6, 7, 8], 
-            [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]]
-        for x in solution:
-            if all([spot == letter for spot in x]):
+        # check the row
+        row_ind = math.floor(square / 3)
+        row = self.board[row_ind*3:(row_ind+1)*3]
+        # print('row', row)
+        if all([s == letter for s in row]):
+            return True
+        col_ind = square % 3
+        column = [self.board[col_ind+i*3] for i in range(3)]
+        # print('col', column)
+        if all([s == letter for s in column]):
+            return True
+        if square % 2 == 0:
+            diagonal1 = [self.board[i] for i in [0, 4, 8]]
+            # print('diag1', diagonal1)
+            if all([s == letter for s in diagonal1]):
+                return True
+            diagonal2 = [self.board[i] for i in [2, 4, 6]]
+            # print('diag2', diagonal2)
+            if all([s == letter for s in diagonal2]):
                 return True
         return False
 
 def play(game, x_player, o_player, print_game=True):
 
     if print_game:
-        game.print_board()
+        game.print_board_number()
 
     # starting letter
     letter = "X"   
@@ -121,7 +137,7 @@ def play(game, x_player, o_player, print_game=True):
             # check for winner
             if game.current_winner:
                 if print_game:
-                    print(letter + "has won!")
+                    print(letter + " has won!")
                 return letter
 
             # after the move is made, the player letter switches
@@ -129,6 +145,8 @@ def play(game, x_player, o_player, print_game=True):
                 letter = 'O'
             else:
                 letter = 'X'
+        
+        time.sleep(1)
 
     if print_game:
         print("It's a Tie!")
