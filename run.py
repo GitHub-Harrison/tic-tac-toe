@@ -2,8 +2,11 @@ import random
 import math
 import time
 
-# Code for the players Human/Computer
+
 class Player:
+    """
+    Class for basic player functions
+    """
 
     def __init__(self, letter):
         # letter is X or O
@@ -13,7 +16,7 @@ class Player:
     def get_move(self, game):
         pass
 
-# Code for computer player
+
 class ComputerPlayer(Player):
     """
     Class that controls the computer player functions and
@@ -26,7 +29,7 @@ class ComputerPlayer(Player):
         square = random.choice(game.available_moves())
         return square
 
-# Code for the human player
+
 class HumanPlayer(Player):
     """
     Human player class that controls everything related to
@@ -55,7 +58,11 @@ class HumanPlayer(Player):
                 print("Invalid square. Please try again.")
         return val
 
+
 class TicTacToe:
+    """
+    Class containing all function required to run the game
+    """
     def __init__(self):
         self.board = [' ' for _ in range(9)]   # to replicate a 3x3 board 
         self.current_winner = None   # to keep track of the winner
@@ -81,7 +88,7 @@ class TicTacToe:
         Function to print numbers allowing users to see
         where they can move to
         """
-        number_board = [[str(i) for i in range(j * 3, (j+1) * 3)] for j in range(3)]
+        number_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
         for row in number_board:
             print(" | " + " | ".join(row) + " | ")
 
@@ -152,6 +159,7 @@ class TicTacToe:
                 return True
         return False
 
+
 def play(game, x_player, o_player, print_game=True):
     """
     Main function that controls the running game
@@ -192,6 +200,7 @@ def play(game, x_player, o_player, print_game=True):
 
     if print_game:
         print("It's a Tie!")
+
 
 if __name__ == '__main__':
     x_player = HumanPlayer('X')
