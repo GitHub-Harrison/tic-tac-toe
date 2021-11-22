@@ -1,8 +1,8 @@
-board = ["1", "2", "3",
-        "4", "5", "6",
-        "7", "8", "9"]
-currentPlayer = "X"
-currentWinner = None
+board = ["-", "-", "-",
+        "-", "-", "-",
+        "-", "-", "-"]
+current_player = "X"
+current_winner = None
 gameRunning = True
 
 # print the game board
@@ -12,8 +12,15 @@ def print_board(board):
     print(board[3] + " | " + board[4] + " | " + board[5])
     print("----------")
     print(board[6] + " | " + board[7] + " | " + board[8])
+print_board(board)
 
 # take player input
+def playerInput(board):
+    pinput = int(input("Enter a number 1-9: "))
+    if pinput >= 1 and pinput <= 9 and board[pinput-1] == "-":
+        board[pinput-1] = current_player
+    else:
+        print("A player is already in that spot.")
 
 # check for win or tie
 
