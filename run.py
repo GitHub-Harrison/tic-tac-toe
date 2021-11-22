@@ -1,6 +1,7 @@
 import random
 import math
 import time
+import os
 
 
 class Player:
@@ -88,8 +89,8 @@ class TicTacToe:
         Function to print numbers allowing users to see
         where they can move to
         """
-        number_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
-        for row in number_board:
+        num_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
+        for row in num_board:
             print(" | " + " | ".join(row) + " | ")
 
     # Code for available moves
@@ -158,6 +159,13 @@ class TicTacToe:
             if all([s == letter for s in diagonal2]):
                 return True
         return False
+
+    def clear():
+        """
+        Function which is supposed to clear the terminal to
+        make it more user friendly
+        """
+        os.system("cls" if os.name == "nt" else "clear")
 
 
 def play(game, x_player, o_player, print_game=True):
