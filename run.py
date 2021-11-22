@@ -94,3 +94,7 @@ while game_running:
     computer_player(board)
     check_win()
     check_tie(board)
+
+# Game doesn't stop after a winner is declared
+# Change X, O to a different icon
+# Add gameover screen at the end?
