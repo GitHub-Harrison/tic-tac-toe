@@ -47,6 +47,21 @@ def check_vert(board):
         current_winner = board[2]
         return True
 
+def check_diag(board):
+    global current_winner
+    if board[0] == board[4] == board[8] and board[0] != "-":
+        current_winner = board[0]
+        return True
+    elif board[2] == board[4] == board[6] and board[2] != "-":
+        current_winner = board[2]
+        return True
+
+def check_tie(board):
+    if "-" not in board:
+        print_board(board)
+        print("The game ends in a Tie!")
+        game_running = False
+
 # switch the player
 
 # check for win or tie again
@@ -54,3 +69,5 @@ def check_vert(board):
 while game_running:
     print_board(board)
     playerInput(board)
+    check_hor(board)
+    check_vert(board)
