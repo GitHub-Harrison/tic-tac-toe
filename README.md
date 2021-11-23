@@ -19,6 +19,16 @@ Those are the basic steps of how a single game of tic-tac-toe works.
 
 ## Features
 
+### Main Menu
+* The main menu feature will consist of 4 options for the user to choose from: 
+    * Play Game - starts the game.
+    * How to play - explains how the game works.
+    * About - explains what tic-tac-toe is.
+    * Exit - exits the game.
+
+* The reason for the main menu is to make the project more visually appealing and to allow the user to understand what is happening rather than being thrown directly into the game expected to know what tic-tac-toe is and how to play it.
+
+
 ### Board Generation
 * The first feature of this project is visually one of the most important aspects, the board, this feature allows the user to see all possible moves they can make without having to keep a mental note of previous moves made by themselves or the computer.
 * screenshot here
