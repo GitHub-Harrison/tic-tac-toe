@@ -2,6 +2,7 @@ import random
 import math
 import time
 import os
+import sys
 
 
 class Player:
@@ -13,8 +14,10 @@ class Player:
         # letter is X or O
         self.letter = letter
 
-    # for players to get their next move
     def get_move(self, game):
+        """
+        for players to get their next move
+        """
         pass
 
 
@@ -36,7 +39,7 @@ class HumanPlayer(Player):
     Human player class that controls everything related to
     the users input
     """
-    
+
     def __init__(self, letter):
         super().__init__(letter)
 
@@ -64,7 +67,7 @@ def main_menu():
     """
     Function for a main menu making it more obvious
     to users that the code/game has started.
-    List of options containing: 
+    List of options containing:
     1) Play Game 2) How to play 3) About 4) Exit
     """
     choice = 0
@@ -80,16 +83,17 @@ def main_menu():
         print("4 - Exit")
         print()
         choice = input("Enter your choice: ")
-        try:
-            if choice == "1":
-                TicTacToe()
-            elif choice == "2":
-                pass # Create how to play section
-            elif choice == "3":
-                pass # Create about section
-            elif choice == "4":
-                print("Thanks for playing!")
-        except ValueError:
+
+        if choice == "1":
+            TicTacToe()
+        elif choice == "2":
+            print("How to play")
+        elif choice == "3":
+            print("About")
+        elif choice == "4":
+            print("Thanks for playing!")
+            sys.exit()
+        else:
             print("Please enter a valid choice.")
 
 
@@ -98,7 +102,7 @@ class TicTacToe:
     Class containing all function required to run the game
     """
     def __init__(self):
-        self.board = [' ' for _ in range(9)]   # to replicate a 3x3 board 
+        self.board = [' ' for _ in range(9)]   # to replicate a 3x3 board
         self.current_winner = None   # to keep track of the winner
 
     # Code for the board
@@ -210,7 +214,7 @@ def play(game, x_player, o_player, print_game=True):
         game.print_board_number()
 
     # starting letter
-    letter = "X"   
+    letter = "X"
     while game.empty_squares():
         # get the move from the player
         if letter == "O":
@@ -236,7 +240,7 @@ def play(game, x_player, o_player, print_game=True):
                 letter = 'O'
             else:
                 letter = 'X'
-        
+
         time.sleep(1)
 
     if print_game:
@@ -248,4 +252,4 @@ if __name__ == '__main__':
     o_player = ComputerPlayer('O')
     ttt = TicTacToe()
     main_menu()
-    play(ttt, x_player, o_player, print_game=True)   
+    play(ttt, x_player, o_player, print_game=True)
