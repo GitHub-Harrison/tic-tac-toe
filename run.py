@@ -52,6 +52,7 @@ class HumanPlayer(Player):
         valid_square = False
         val = None
         while not valid_square:
+            print()
             square = input(self.letter + "'s turn. Enter move (0-8):")
             try:
                 val = int(square)
@@ -101,7 +102,9 @@ def main_menu():
         choice = input("Enter your choice: ")
 
         if choice == "1":
-            TicTacToe()
+            print("\nGame Loading...\n")
+            time.sleep(1)
+            play(ttt, x_player, o_player, print_game=True)
         elif choice == "2":
             print("\nHow to play")
         elif choice == "3":
@@ -270,3 +273,12 @@ if __name__ == '__main__':
     ttt = TicTacToe()
     main_menu()
     play(ttt, x_player, o_player, print_game=True)
+
+# Main menu option 1 + 3 working but menu is shown
+# directly after, change this to have a different
+# menu allowing the user to return to main menu or
+# allowing the user to select the other options listed
+# in the main menu.
+#
+# Menu is also instantly shown after completing the game
+# replace this with a play again and/or game over screen.
