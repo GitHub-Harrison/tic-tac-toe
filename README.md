@@ -51,9 +51,7 @@ Those are the basic steps of how a single game of tic-tac-toe works.
 
 
 ### Future Features
-* Random player goes first?
 * Play again
 * Invalid option
 * Invalid input
 * Game over
-* Menu screen
