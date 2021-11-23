@@ -63,6 +63,22 @@ class HumanPlayer(Player):
         return val
 
 
+def about():
+    """
+    function to create an about section accessed
+    from the main menu, users can return to the main
+    menu or access any option the main menu offers
+    """
+
+    print("\nTic-tac-toe or noughts and crosses is a")
+    print("paper-and-pencil game for two players who take")
+    print("turns marking the spaces in a 3x3 grid with X or O.")
+    print("\nThe player who succeeds in placing three of their")
+    print("letters in a horizontal, vertical or diagonal row is")
+    print("the winner. \nIf neither player can place 3 in a row")
+    print("the game ends in a tie and the players can play again.")
+
+
 def main_menu():
     """
     Function for a main menu making it more obvious
@@ -73,7 +89,7 @@ def main_menu():
     choice = 0
     while choice != "4":
 
-        print("\n Welcome to my Tic-Tac-Toe game!")
+        print("\nWelcome to my Tic-Tac-Toe game!")
         print()
         print("Choose from this menu to continue.")
         print()
@@ -87,11 +103,12 @@ def main_menu():
         if choice == "1":
             TicTacToe()
         elif choice == "2":
-            print("How to play")
+            print("\nHow to play")
         elif choice == "3":
-            print("About")
+            print("\nAbout")
+            about()
         elif choice == "4":
-            print("Thanks for playing!")
+            print("\nThank you for playing!")
             sys.exit()
         else:
             print("Please enter a valid choice.")
