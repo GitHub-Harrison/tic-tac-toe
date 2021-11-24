@@ -101,24 +101,24 @@ def about():
     print("\nIf neither player can place 3 in a row the game")
     print("ends in a tie and the players can play again.")
 
-    option = 0
-    while option != "4":
+    choice = 0
+    while choice != "4":
 
         print("\n1 - Play Game")
         print("2 - How to play")
         print("3 - Return")
         print("4 - Exit")
 
-        if option == "1":
+        if choice == "1":
             print("\nGame Loading...\n")
             time.sleep(1)
             play(ttt, x_player, o_player, print_game=True)
-        elif option == "2":
+        elif choice == "2":
             print("\n     How to play")
             htp()
-        elif option == "3":
+        elif choice == "3":
             main_menu()
-        elif option == "4":
+        elif choice == "4":
             print("\nThank you for playing!")
             sys.exit()
         else:
@@ -174,6 +174,7 @@ class TicTacToe:
         self.current_winner = None   # to keep track of the winner
 
     # Code for the board
+    @staticmethod
     def make_board():
         """
         Function that creates the basic board layout 3x3 square
@@ -265,6 +266,7 @@ class TicTacToe:
                 return True
         return False
 
+    @staticmethod
     def clear():
         """
         Function which is supposed to clear the terminal to
