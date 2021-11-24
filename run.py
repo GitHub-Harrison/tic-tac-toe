@@ -101,29 +101,29 @@ def about():
     print("\nIf neither player can place 3 in a row the game")
     print("ends in a tie and the players can play again.")
 
-    choice = 0
-    while choice != "4":
+    # choice = 0
+    # while choice != "4":
 
-        print("\n1 - Play Game")
-        print("2 - How to play")
-        print("3 - Return")
-        print("4 - Exit")
+    #     print("\n1 - Play Game")
+    #     print("2 - How to play")
+    #     print("3 - Return")
+    #     print("4 - Exit")
 
-        if choice == "1":
-            print("\nGame Loading...\n")
-            time.sleep(1)
-            play(ttt, x_player, o_player, print_game=True)
-        elif choice == "2":
-            print("\n     How to play")
-            htp()
-        elif choice == "3":
-            main_menu()
-        elif choice == "4":
-            print("\nThank you for playing!")
-            sys.exit()
-        else:
-            print("Please enter a valid choice.")
-            time.sleep(0.5)
+    #     if choice == "1":
+    #         print("\nGame Loading...\n")
+    #         time.sleep(1)
+    #         play(ttt, x_player, o_player, print_game=True)
+    #     elif choice == "2":
+    #         print("\n     How to play")
+    #         htp()
+    #     elif choice == "3":
+    #         main_menu()
+    #     elif choice == "4":
+    #         print("\nThank you for playing!")
+    #         sys.exit()
+    #     else:
+    #         print("Please enter a valid choice.")
+    #         time.sleep(0.5)
 
 
 def main_menu():
