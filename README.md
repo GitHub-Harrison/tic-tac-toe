@@ -1,5 +1,5 @@
 # Tic Tac Toe
-I have decided to recreate the iconic childhood game of tic-tac-toe into a Python terminal game, which will run on Heroku.
+I have decided to recreate the iconic childhood game of tic-tac-toe into a Python terminal game, which will be deployed to Heroku.
 Users can try to beat the computer by trying to place 3 of their markers in a row, the board will be shown before any moves are made and after each players makes a move.
 
 ## Flow Chart
