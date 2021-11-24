@@ -49,9 +49,11 @@ Those are the basic steps of how a single game of tic-tac-toe works.
 ### Check Tie
 * The check tie feature is similar to the check win except instead of checking for 3 of the same in a row it simply returns a tie if the check win feature does not return as true.
 
+### Invalid Input/Option
+* This feature is present whenever the user is prompted to input data.
+* The purpose of this is to only allow inputs that work with the game and to ask the user to try again each time they input an invalid data.
+
 
 ### Future Features
 * Play again
-* Invalid option
-* Invalid input
 * Game over
