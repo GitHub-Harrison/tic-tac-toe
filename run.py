@@ -64,6 +64,27 @@ class HumanPlayer(Player):
         return val
 
 
+def htp():
+    """
+    How to play section accessed from the main menu
+    similar to the about section
+    """
+
+    print("\nTic-tac-toe is a simple game, here are the basics")
+    print()
+    print("First, the board gets drawn.")
+    print("\nSecond, the first player makes their move.")
+    print("In this game the human player will always go first.")
+    print("\nNext the computer will make their move.")
+    print("\nFrom here the players keep alternating moves until")
+    print("one of the players has drawn a row of three symbols")
+    print("or until no one can win.")
+    print("\nIn the case that no one can win the game will end")
+    print("in a tie.")
+    print("\nRegardless of who wins, once the game has ended you")
+    print("can always play again!")
+
+
 def about():
     """
     function to create an about section accessed
@@ -76,8 +97,33 @@ def about():
     print("turns marking the spaces in a 3x3 grid with X or O.")
     print("\nThe player who succeeds in placing three of their")
     print("letters in a horizontal, vertical or diagonal row is")
-    print("the winner. \nIf neither player can place 3 in a row")
-    print("the game ends in a tie and the players can play again.")
+    print("the winner.")
+    print("\nIf neither player can place 3 in a row the game")
+    print("ends in a tie and the players can play again.")
+
+    option = 0
+    while option != "4":
+
+        print("\n1 - Play Game")
+        print("2 - How to play")
+        print("3 - Return")
+        print("4 - Exit")
+
+        if option == "1":
+            print("\nGame Loading...\n")
+            time.sleep(1)
+            play(ttt, x_player, o_player, print_game=True)
+        elif option == "2":
+            print("\nHow to play")
+            htp()
+        elif option == "3":
+            main_menu()
+        elif option == "4":
+            print("\nThank you for playing!")
+            sys.exit()
+        else:
+            print("Please enter a valid choice.")
+            time.sleep(0.5)
 
 
 def main_menu():
@@ -107,6 +153,7 @@ def main_menu():
             play(ttt, x_player, o_player, print_game=True)
         elif choice == "2":
             print("\nHow to play")
+            htp()
         elif choice == "3":
             print("\nAbout")
             about()
@@ -115,6 +162,7 @@ def main_menu():
             sys.exit()
         else:
             print("Please enter a valid choice.")
+            time.sleep(0.5)
 
 
 class TicTacToe:
