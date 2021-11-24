@@ -70,19 +70,19 @@ def htp():
     similar to the about section
     """
 
-    print("\nTic-tac-toe is a simple game, here are the basics")
+    print("\nTic-tac-toe is a simple game, here are the basics:")
     print()
-    print("First, the board gets drawn.")
-    print("\nSecond, the first player makes their move.")
-    print("In this game the human player will always go first.")
-    print("\nNext the computer will make their move.")
-    print("\nFrom here the players keep alternating moves until")
-    print("one of the players has drawn a row of three symbols")
-    print("or until no one can win.")
-    print("\nIn the case that no one can win the game will end")
-    print("in a tie.")
-    print("\nRegardless of who wins, once the game has ended you")
-    print("can always play again!")
+    print(" First, the board gets drawn.")
+    print("\n Second, the first player makes their move.")
+    print(" In this game the human player will always go first.")
+    print("\n Next the computer will make their move.")
+    print("\n From here the players keep alternating moves until")
+    print(" one of the players has drawn a row of three symbols")
+    print(" or until no one can win.")
+    print("\n In the case that no one can win the game will end")
+    print(" in a tie.")
+    print("\n Regardless of who wins, once the game has ended you")
+    print(" can always play again!")
 
 
 def about():
@@ -114,7 +114,7 @@ def about():
             time.sleep(1)
             play(ttt, x_player, o_player, print_game=True)
         elif option == "2":
-            print("\nHow to play")
+            print("\n     How to play")
             htp()
         elif option == "3":
             main_menu()
@@ -152,10 +152,10 @@ def main_menu():
             time.sleep(1)
             play(ttt, x_player, o_player, print_game=True)
         elif choice == "2":
-            print("\nHow to play")
+            print("\n     How to play")
             htp()
         elif choice == "3":
-            print("\nAbout")
+            print("\n     About")
             about()
         elif choice == "4":
             print("\nThank you for playing!")
@@ -322,11 +322,13 @@ if __name__ == '__main__':
     main_menu()
     play(ttt, x_player, o_player, print_game=True)
 
-# Main menu option 1 + 3 working but menu is shown
+# Main menu option 1 + 2 + 3 working but menu is shown
 # directly after, change this to have a different
 # menu allowing the user to return to main menu or
 # allowing the user to select the other options listed
 # in the main menu.
+#
+# new menu on about option constantly keeps printing
 #
 # Menu is also instantly shown after completing the game
 # replace this with a play again and/or game over screen.
