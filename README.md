@@ -1,6 +1,7 @@
 # Tic Tac Toe
 I have decided to recreate the iconic childhood game of tic-tac-toe into a Python terminal game, which will be deployed to Heroku.
 Users can try to beat the computer by trying to place 3 of their markers in a row, the board will be shown before any moves are made and after each players makes a move.
+* insert link to live version
 
 ## Flow Chart
 ![Flow Chart](documentation/ttt-flowchart.png)
@@ -53,7 +54,14 @@ Those are the basic steps of how a single game of tic-tac-toe works.
 * This feature is present whenever the user is prompted to input data.
 * The purpose of this is to only allow inputs that work with the game and to ask the user to try again each time they input an invalid data.
 
-
 ### Future Features
 * Play again
 * Game over
+
+## Data Model
+
+## Testing
+
+## Deployment
+
+## Credits
