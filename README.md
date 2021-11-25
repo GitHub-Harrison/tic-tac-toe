@@ -29,6 +29,9 @@ Those are the basic steps of how a single game of tic-tac-toe works.
 
 * The reason for the main menu is to make the project more visually appealing and to allow the user to understand what is happening rather than being thrown directly into the game expected to know what tic-tac-toe is and how to play it.
 
+### Menu
+* As well as having a main menu I have also included a smaller menu like feature which will allow the user to return to the main menu or play the game.
+* This feature is only available when the user goes to the about or how to play section.
 
 ### Board Generation
 * The first feature of this project is visually one of the most important aspects, the board, this feature allows the user to see all possible moves they can make without having to keep a mental note of previous moves made by themselves or the computer.
