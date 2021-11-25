@@ -174,6 +174,7 @@ def menu():
 
         if option == "1":
             print("\nReturning to Main Menu...")
+            time.sleep(1)
             main_menu()
         elif option == "2":
             print("\nGame Loading...")
