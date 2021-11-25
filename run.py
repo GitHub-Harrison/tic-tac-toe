@@ -163,6 +163,14 @@ def menu():
     similar to main menu but with only one
     option to return to main menu
     """
+
+    def clear():
+        """
+        Function which is supposed to clear the terminal to
+        make it more user friendly
+        """
+        os.system("cls" if os.name == "nt" else "clear")
+
     option = 0
     if option != "1":
 
@@ -173,10 +181,12 @@ def menu():
         option = input("Enter your choice: ")
 
         if option == "1":
+            clear()
             print("\nReturning to Main Menu...")
             time.sleep(1)
             main_menu()
         elif option == "2":
+            clear()
             print("\nGame Loading...")
             time.sleep(0.8)
             play(ttt, x_player, o_player, print_game=True)
@@ -345,7 +355,6 @@ def play(game, x_player, o_player, print_game=True):
 
     if print_game:
         print("\nIt's a Tie!")
-        sys.exit()  # stops the menu from repeating
 
 
 if __name__ == '__main__':
@@ -353,6 +362,7 @@ if __name__ == '__main__':
     o_player = ComputerPlayer('O')
     ttt = TicTacToe()
     main_menu()
+    menu()
     # play(ttt, x_player, o_player, print_game=True)
 
 # Main menu option 1 + 2 + 3 working but menu is shown
