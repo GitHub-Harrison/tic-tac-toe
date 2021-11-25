@@ -84,6 +84,8 @@ def htp():
     print("\n Regardless of who wins, once the game has ended you")
     print(" can always play again!")
 
+    menu()
+
 
 def about():
     """
@@ -101,29 +103,7 @@ def about():
     print("\nIf neither player can place 3 in a row the game")
     print("ends in a tie and the players can play again.")
 
-    # choice = 0
-    # while choice != "4":
-
-    #     print("\n1 - Play Game")
-    #     print("2 - How to play")
-    #     print("3 - Return")
-    #     print("4 - Exit")
-
-    #     if choice == "1":
-    #         print("\nGame Loading...\n")
-    #         time.sleep(1)
-    #         play(ttt, x_player, o_player, print_game=True)
-    #     elif choice == "2":
-    #         print("\n     How to play")
-    #         htp()
-    #     elif choice == "3":
-    #         main_menu()
-    #     elif choice == "4":
-    #         print("\nThank you for playing!")
-    #         sys.exit()
-    #     else:
-    #         print("Please enter a valid choice.")
-    #         time.sleep(0.5)
+    menu()
 
 
 def main_menu():
@@ -164,15 +144,38 @@ def main_menu():
             clear()
             print("\n     How to play")
             htp()
+            time.sleep(1)
         elif choice == "3":
             clear()
             print("\n     About")
             about()
+            time.sleep(1)
         elif choice == "4":
             print("\nThank you for playing!")
             sys.exit()
         else:
             print("Please enter a valid choice.")
+            time.sleep(0.5)
+
+
+def menu():
+    """
+    similar to main menu but with only one
+    option to return to main menu
+    """
+    option = 0
+    if option != "1":
+
+        print()
+        print("1 - Return")
+        print()
+        option = input("Enter your choice: ")
+
+        if option == "1":
+            print("\nReturning to Main Menu...")
+            main_menu()
+        else:
+            print("Please enter a valid option.")
             time.sleep(0.5)
 
 
@@ -329,12 +332,13 @@ def play(game, x_player, o_player, print_game=True):
             else:
                 letter = 'X'
 
-        time.sleep(2)
+        time.sleep(1.5)
         clear()
         game.print_board()
 
     if print_game:
-        print("It's a Tie!")
+        print("\nIt's a Tie!")
+        sys.exit()  # stops the menu from repeating
 
 
 if __name__ == '__main__':
@@ -342,7 +346,7 @@ if __name__ == '__main__':
     o_player = ComputerPlayer('O')
     ttt = TicTacToe()
     main_menu()
-    play(ttt, x_player, o_player, print_game=True)
+    # play(ttt, x_player, o_player, print_game=True)
 
 # Main menu option 1 + 2 + 3 working but menu is shown
 # directly after, change this to have a different
