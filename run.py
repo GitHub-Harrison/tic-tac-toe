@@ -138,7 +138,7 @@ def main_menu():
         if choice == "1":
             clear()
             print("\nGame Loading...\n")
-            time.sleep(1)
+            time.sleep(0.8)
             play(ttt, x_player, o_player, print_game=True)
         elif choice == "2":
             clear()
@@ -166,17 +166,23 @@ def menu():
     option = 0
     if option != "1":
 
-        print()
+        print("\n")
         print("1 - Return")
+        print("2 - Play Game")
         print()
         option = input("Enter your choice: ")
 
         if option == "1":
             print("\nReturning to Main Menu...")
             main_menu()
+        elif option == "2":
+            print("\nGame Loading...")
+            time.sleep(0.8)
+            play(ttt, x_player, o_player, print_game=True)
         else:
             print("Please enter a valid option.")
-            time.sleep(0.5)
+            time.sleep(0.8)
+            menu()
 
 
 class TicTacToe:
