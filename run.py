@@ -266,19 +266,26 @@ class TicTacToe:
                 return True
         return False
 
-    @staticmethod
-    def clear():
-        """
-        Function which is supposed to clear the terminal to
-        make it more user friendly
-        """
-        os.system("cls" if os.name == "nt" else "clear")
+    # @staticmethod
+    # def clear():
+    #     """
+    #     Function which is supposed to clear the terminal to
+    #     make it more user friendly
+    #     """
+    #     os.system("cls" if os.name == "nt" else "clear")
 
 
 def play(game, x_player, o_player, print_game=True):
     """
     Main function that controls the running game
     """
+
+    def clear():
+        """
+        Function which is supposed to clear the terminal to
+        make it more user friendly
+        """
+        os.system("cls" if os.name == "nt" else "clear")
 
     if print_game:
         game.print_board_number()
@@ -311,7 +318,8 @@ def play(game, x_player, o_player, print_game=True):
             else:
                 letter = 'X'
 
-        time.sleep(1)
+        time.sleep(2)
+        clear()
 
     if print_game:
         print("It's a Tie!")
