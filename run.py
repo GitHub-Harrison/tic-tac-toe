@@ -133,6 +133,14 @@ def main_menu():
     List of options containing:
     1) Play Game 2) How to play 3) About 4) Exit
     """
+
+    def clear():
+        """
+        Function which is supposed to clear the terminal to
+        make it more user friendly
+        """
+        os.system("cls" if os.name == "nt" else "clear")
+
     choice = 0
     while choice != "4":
 
@@ -148,13 +156,16 @@ def main_menu():
         choice = input("Enter your choice: ")
 
         if choice == "1":
+            clear()
             print("\nGame Loading...\n")
             time.sleep(1)
             play(ttt, x_player, o_player, print_game=True)
         elif choice == "2":
+            clear()
             print("\n     How to play")
             htp()
         elif choice == "3":
+            clear()
             print("\n     About")
             about()
         elif choice == "4":
