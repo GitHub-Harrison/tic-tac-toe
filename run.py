@@ -320,6 +320,7 @@ def play(game, x_player, o_player, print_game=True):
 
         time.sleep(2)
         clear()
+        game.print_board()
 
     if print_game:
         print("It's a Tie!")
