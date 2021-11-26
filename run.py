@@ -5,6 +5,14 @@ import os
 import sys
 
 
+def clear():
+    """
+    Function which is supposed to clear the terminal to
+    make it more user friendly
+    """
+    os.system("cls" if os.name == "nt" else "clear")
+
+
 class Player:
     """
     Class for basic player functions
@@ -114,13 +122,6 @@ def main_menu():
     1) Play Game 2) How to play 3) About 4) Exit
     """
 
-    def clear():
-        """
-        Function which is supposed to clear the terminal to
-        make it more user friendly
-        """
-        os.system("cls" if os.name == "nt" else "clear")
-
     choice = 0
     while choice != "4":
 
@@ -138,62 +139,56 @@ def main_menu():
         if choice == "1":
             clear()
             print("\nGame Loading...\n")
-            time.sleep(0.8)
+            time.sleep(1)
             play(ttt, x_player, o_player, print_game=True)
         elif choice == "2":
             clear()
             print("\n     How to play")
             htp()
-            time.sleep(1)
+            time.sleep(1.5)
         elif choice == "3":
             clear()
             print("\n     About")
             about()
-            time.sleep(1)
+            time.sleep(1.5)
         elif choice == "4":
             print("\nThank you for playing!")
             sys.exit()
         else:
-            print("Please enter a valid choice.")
-            time.sleep(0.5)
+            print("\nPlease enter a valid choice.")
+            time.sleep(2)
+            clear()
 
 
 def menu():
     """
-    similar to main menu but with only one
-    option to return to main menu
+    similar to main menu but with only two
+    options to return to main menu or play
+    game to be called on the about and
+    how to play sections
     """
 
-    def clear():
-        """
-        Function which is supposed to clear the terminal to
-        make it more user friendly
-        """
-        os.system("cls" if os.name == "nt" else "clear")
+    print("\n")
+    print("1 - Return")
+    print("2 - Play Game")
+    print()
+    option = input("Enter your choice: ")
 
-    option = 0
-    if option != "1":
-
-        print("\n")
-        print("1 - Return")
-        print("2 - Play Game")
-        print()
-        option = input("Enter your choice: ")
-
-        if option == "1":
-            clear()
-            print("\nReturning to Main Menu...")
-            time.sleep(1)
-            main_menu()
-        elif option == "2":
-            clear()
-            print("\nGame Loading...")
-            time.sleep(0.8)
-            play(ttt, x_player, o_player, print_game=True)
-        else:
-            print("Please enter a valid option.")
-            time.sleep(0.8)
-            menu()
+    if option == "1":
+        clear()
+        print("\nReturning to Main Menu...")
+        time.sleep(1)
+        main_menu()
+    elif option == "2":
+        clear()
+        print("\nGame Loading...")
+        time.sleep(0.8)
+        play(ttt, x_player, o_player, print_game=True)
+    else:
+        print("Please enter a valid option.")
+        clear()
+        time.sleep(0.8)
+        menu()
 
 
 class TicTacToe:
@@ -203,6 +198,15 @@ class TicTacToe:
     def __init__(self):
         self.board = [' ' for _ in range(9)]   # to replicate a 3x3 board
         self.current_winner = None   # to keep track of the winner
+        self.reset()
+
+    def reset(self):
+        """
+        function to reset the values of the following
+        variables
+        """
+        self.board = [' ' for _ in range(9)]
+        self.current_winner = None
 
     # Code for the board
     @staticmethod
@@ -269,7 +273,6 @@ class TicTacToe:
             return True
         return False
 
-    # Below code is not detecing a win
     def winner(self, square, letter):
         """
         Function which checks all possible winning
@@ -297,26 +300,11 @@ class TicTacToe:
                 return True
         return False
 
-    # @staticmethod
-    # def clear():
-    #     """
-    #     Function which is supposed to clear the terminal to
-    #     make it more user friendly
-    #     """
-    #     os.system("cls" if os.name == "nt" else "clear")
-
 
 def play(game, x_player, o_player, print_game=True):
     """
     Main function that controls the running game
     """
-
-    def clear():
-        """
-        Function which is supposed to clear the terminal to
-        make it more user friendly
-        """
-        os.system("cls" if os.name == "nt" else "clear")
 
     if print_game:
         game.print_board_number()
@@ -349,7 +337,7 @@ def play(game, x_player, o_player, print_game=True):
             else:
                 letter = 'X'
 
-        time.sleep(1.5)
+        time.sleep(3)
         clear()
         game.print_board()
 
@@ -362,16 +350,4 @@ if __name__ == '__main__':
     o_player = ComputerPlayer('O')
     ttt = TicTacToe()
     main_menu()
-    menu()
     # play(ttt, x_player, o_player, print_game=True)
-
-# Main menu option 1 + 2 + 3 working but menu is shown
-# directly after, change this to have a different
-# menu allowing the user to return to main menu or
-# allowing the user to select the other options listed
-# in the main menu.
-#
-# new menu on about option constantly keeps printing
-#
-# Menu is also instantly shown after completing the game
-# replace this with a play again and/or game over screen.
