@@ -140,6 +140,7 @@ def main_menu():
             clear()
             print("\nGame Loading...\n")
             time.sleep(1)
+            ttt.reset()
             play(ttt, x_player, o_player, print_game=True)
         elif choice == "2":
             clear()
@@ -183,6 +184,7 @@ def menu():
         clear()
         print("\nGame Loading...")
         time.sleep(0.8)
+        ttt.reset()
         play(ttt, x_player, o_player, print_game=True)
     else:
         print("Please enter a valid option.")
@@ -198,7 +200,6 @@ class TicTacToe:
     def __init__(self):
         self.board = [' ' for _ in range(9)]   # to replicate a 3x3 board
         self.current_winner = None   # to keep track of the winner
-        self.reset()
 
     def reset(self):
         """
