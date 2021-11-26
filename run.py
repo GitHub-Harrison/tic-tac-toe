@@ -338,7 +338,7 @@ def play(game, x_player, o_player, print_game=True):
             else:
                 letter = 'X'
 
-        time.sleep(3)
+        time.sleep(2.5)
         clear()
         game.print_board()
 
