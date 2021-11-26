@@ -1,10 +1,22 @@
 # Tic Tac Toe
 I have decided to recreate the iconic childhood game of tic-tac-toe into a Python terminal game, which will be deployed to Heroku.
 Users can try to beat the computer by trying to place 3 of their markers in a row, the board will be shown before any moves are made and after each players makes a move.
-* insert link to live version
+* Link to the live version can be found [here](https://tic-tac-toe-p3-python.herokuapp.com/).
 
 ## Flow Chart
 ![Flow Chart](documentation/ttt-flowchart.png)
+
+## User Stories
+User stories relates to what a user should be able to do and what they might not want to encounter as a player, below are a few examples that I could think of.
+
+### As a User:
+* I want to be greeted by a menu.
+* I want to be able to read the rules before playing.
+* I want to be able to play against a computer player.
+* I want to be able to see the board after each move.
+* I want to know more about the game before playing.
+* I want to play the game again and again.
+* I don't want a cluttered screen while playing.
 
 ## How To Play
 My Python terminal version of tic-tac-toe is based on the childhood pen and paper game. You can read more about it on the [Tic Tac Toe Wiki](https://en.wikipedia.org/wiki/Tic-tac-toe)
@@ -61,9 +73,17 @@ Those are the basic steps of how a single game of tic-tac-toe works.
 * Play again
 * Game over
 
+## Technologies Used
+During this project I used multiple different technologies to help bring my idea to life, below is a list of the technologies used with a brief explanation.
+* [Python](https://wiki.python.org/moin/FrontPage) - This was used for to create the entire project.
+* [GitHub](https://github.com/) - GitHub is where all my code was stored and kept in one place.
+* [Gitpod](https://www.gitpod.io/) - Gitpod is the environment in which I did all the coding and where the code was built.
+* [Heroku](https://www.heroku.com) - Heroku was what I used to deploy the project.
+
 ## Data Model
 
 ## Testing
+### All testing has been done and documented in the TESTING.md file.
 
 ## Deployment
 
