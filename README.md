@@ -81,10 +81,48 @@ During this project I used multiple different technologies to help bring my idea
 * [Heroku](https://www.heroku.com) - Heroku was what I used to deploy the project.
 
 ## Data Model
+I decided to use several classes for my model, the first classes encountered are the player classes followed by the TicTacToe class which controls all the game functions.
+
+### Player Classes
+Within the project I created 3 different classes for the player/s. 
+* The first class created would just be the general class for basic player functions.
+* The second class was created for the computer controlled player which would take the initial Player class as a variable. This class is seperate to the human player class as it makes the computer randomise their moves.
+* The third and final player class is the HumanPlayer class which is what allows the user to play the game, this class checks all available posistions on the board and will only allow the user to place their marker at one of the available squares. If the user tries to go into a square that is not available they will be met with an error message and prompted to enter another valid move.
+
+### TicTacToe Class
+The TicTacToe class was created to hold all the functions that make the game.
+* This class creates the board that the user will play on while also checking available moves on said board, as well as checking for available moves it also checks the amount of empty squres (this is to help check if the game is tied or not).
+* After the board related functions there is the function to actually make the users desired move, once each player makes their move a function to check for a winner is then run. This function will check all possible winning combonations and if either player has one of those combonations on the board this function will end the game and print out the winner to the terminal.
+
+
 
 ## Testing
 ### All testing has been done and documented in the TESTING.md file. This includes the PEP8 Validator.
 
 ## Deployment
+This project was doployed using Code Institute's mock terminal for Heroku.
+* Steps for deployment:
+    * Sign up for a Heroku account, if you already have one just sign in.
+    * Once logged into Heroku go to the dashboard.
+    * Click on 'New' -> 'Create New App'.
+    * Enter the app name and choose a region (for me this was tic-tac-toe-p3-python and Europe).
+    * Click 'Create app'
+    * From the 'Deploy' page go across to 'Settings'
+    * Find 'Config Vars' and click 'Reveal Config Vars'
+    * In the 'KEY' section enter "PORT" and in the 'VALUE' section enter "8000" and click 'Add'
+    * Now find 'Buildpacks' on the same page and click 'Add buildpack'
+    * Search for and select Python and click 'Save changes'
+    * Repeat the last two steps except this time for node.js
+    * Now return to the 'Deploy' page and find the 'Deployment method' section
+    * Select 'GitHub' this should prompt you to login to your GitHub account
+    * Once connected it will ask for a repository to connect to
+    * Simply search the repository name, the repositroy should appear below
+    * Click 'Connect'
+    * From here you can choose either 'Manual deploy' or 'Automatic deploys'
+    * To access the deployed link simply click the 'Open app' button located at the top right of your app page.
+
+Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/GitHub-Harrison/tic-tac-toe)
 
 ## Credits
