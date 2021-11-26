@@ -69,9 +69,9 @@ Those are the basic steps of how a single game of tic-tac-toe works.
 * This feature is present whenever the user is prompted to input data.
 * The purpose of this is to only allow inputs that work with the game and to ask the user to try again each time they input an invalid data.
 
-### Future Features
-* Play again
-* Game over
+### Play Again
+* This feature is simply just the main menu being called at the end of the game, this allows the user to choose to pick from the options they were given at the start.
+* I thought this would be better for the user than just the option to play again or exit as they can choose to view the about or how to play section before deciding if they wish to play again or stop playing.
 
 ## Technologies Used
 During this project I used multiple different technologies to help bring my idea to life, below is a list of the technologies used with a brief explanation.
@@ -83,7 +83,7 @@ During this project I used multiple different technologies to help bring my idea
 ## Data Model
 
 ## Testing
-### All testing has been done and documented in the TESTING.md file.
+### All testing has been done and documented in the TESTING.md file. This includes the PEP8 Validator.
 
 ## Deployment
 
