@@ -17,8 +17,11 @@ ADD LINK TO VIDEO TESTING LIKE PREVIOUS PROJECT
 
 ## Bugs
 While coding my project I had come across a few issues/bugs which have all been fixed. I took note of some of these bugs and issues through the GitHub issue tab and have linked them below.
+
 ### Solved Bugs
-* Insert all issue links
+* The first bug I encountered was a [Syntax Error](https://github.com/GitHub-Harrison/tic-tac-toe/issues/1) caused by a capitalised while loop.
+* The second bug I came across was a [TypeError](https://github.com/GitHub-Harrison/tic-tac-toe/issues/2) issue where a line of code was missing 1 required positional arguement.
+* The final issue I encountered was relating to the [main menu function](https://github.com/GitHub-Harrison/tic-tac-toe/issues/3), which printed multiple errors to the terminal while I attempted to get it working as planned.
 
 ### Remaining Bugs
 * There are no remaining bugs.
