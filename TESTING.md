@@ -5,6 +5,22 @@ This file was created to store all testing related content this includes any and
 The testing process has been broken into two sections; one section as a user to test that everything a user might want from this project works and the other from a more admin focused side in terms of making sure all functions and features work as intended.
 
 ### User Story Testing
+Testing user stories required me to take a user first approach to the game and think solely about what a user would want to be able to do within this game. Below are the user stories I tested for:
+
+* ### "I want to be greeted by a menu"
+![Main Menu](documentation/readme/features/main-menu.png)
+* ### "I want to be able to read the rules before playing"
+![How to play](documentation/readme/features/how-to-play.png)
+* ### "I want to be able to play against a computer player"
+![Computer player](documentation/readme/features/computer-player.png)
+* ### "I want to be able to see the board after each move"
+![Updated board](documentation/readme/features/board-updates.png)
+* ### "I want to know more about the game before playing"
+![About](documentation/readme/features/about.png)
+* ### "I want to be able to play again at the end of a game"
+![Play again](documentation/readme/features/play-again.png)
+* ### "I don't want a cluttered screen while playing"
+![Clear function](documentation/readme/features/clear.png)
 
 ### Feature/Function Testing
 
