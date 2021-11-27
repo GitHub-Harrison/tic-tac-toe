@@ -17,7 +17,7 @@ User stories relates to what a user should be able to do and what they might not
 * I want to be able to play against a computer player.
 * I want to be able to see the board after each move.
 * I want to know more about the game before playing.
-* I want to play the game again and again.
+* I want to be able to play again at the end of a game.
 * I don't want a cluttered screen while playing.
 
 ## How To Play
