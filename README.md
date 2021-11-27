@@ -116,6 +116,7 @@ During this project I used multiple different technologies to help bring my idea
 * [GitHub](https://github.com/) - GitHub is where all my code was stored and kept in one place.
 * [Gitpod](https://www.gitpod.io/) - Gitpod is the environment in which I did all the coding and where the code was built.
 * [Heroku](https://www.heroku.com) - Heroku was what I used to deploy the project.
+* [OBS Studio](https://obsproject.com/) - OBS is a recording/streaming software which I used to record myself doing the final tests for the project.
 
 ## Data Model
 I decided to use several classes for my model, the first classes encountered are the player classes followed by the TicTacToe class which controls all the game functions.
