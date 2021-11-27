@@ -41,37 +41,72 @@ Those are the basic steps of how a single game of tic-tac-toe works.
 
 * The reason for the main menu is to make the project more visually appealing and to allow the user to understand what is happening rather than being thrown directly into the game expected to know what tic-tac-toe is and how to play it.
 
+![Main Menu](documentation/features/main-menu.png)
+
+### How to play
+* The main purpose of this feature is to explain how the game tic-tac-toe is meant to be played so players will better understand how to play the game and win.
+
+![How to play](documentation/features/how-to-play.png)
+
+### About
+* The purpose of the about section feature is to just go into a bit of detail about what tic-tac-toe is.
+
+![About](documentation/features/about.png)
+
+### Exit
+* This features sole purpose is to allow the user to exit the game, the exit feature is only presented on the main menu, the user can access the main menu from finishing the game or returning from the about/how to play sections.
+
+![Exit](documentation/features/exit.png)
+
 ### Menu
 * As well as having a main menu I have also included a smaller menu like feature which will allow the user to return to the main menu or play the game.
 * This feature is only available when the user goes to the about or how to play section.
 
+![Menu](documentation/features/menu.png)
+
 ### Board Generation
 * The first feature of this project is visually one of the most important aspects, the board, this feature allows the user to see all possible moves they can make without having to keep a mental note of previous moves made by themselves or the computer.
-* screenshot here
+
+![Board generation](documentation/features/board-gen.png)
 
 ### User Input
 * User input is what allows the user/player to input their moves, the players input is limited to only numbers between 0-8 as those are the only available moves on the board.
 * With each turn that goes by the user will have less options meaning their input options are also less, any input not valid will throw an error message and ask them to try again.
 
+![User input](documentation/features/user-input.png)
+
 ### Board Updates
 * Similar to the board generation this feature allows the board to update after each and every move allowing the user to see an updated version of the board so it's even easier to see the next moves.
+
+![Board updates](documentation/features/board-updates.png)
 
 ### Computer Player
 * This feature allows the user to play against a computer player who randomly generates the moves it makes.
 
+![Computer player](documentation/features/computer-player.png)
+
 ### Check Win
 * The check win feature is an important feature that is run after every move to check and recheck if anyone has won, it does this by checking all horizontal, vertical and diagonal winning combonations and returns the results.
 
+![Check win](documentation/features/check-win.png)
+
 ### Check Tie
 * The check tie feature is similar to the check win except instead of checking for 3 of the same in a row it simply returns a tie if the check win feature does not return as true.
+
+![Check tie](documentation/features/tie.png)
 
 ### Invalid Input/Option
 * This feature is present whenever the user is prompted to input data.
 * The purpose of this is to only allow inputs that work with the game and to ask the user to try again each time they input an invalid data.
 
+![Invalid input](documentation/features/invalid-square.png)
+![invalid choice](documentation/features/valid-choice.png)
+
 ### Play Again
 * This feature is simply just the main menu being called at the end of the game, this allows the user to choose to pick from the options they were given at the start.
 * I thought this would be better for the user than just the option to play again or exit as they can choose to view the about or how to play section before deciding if they wish to play again or stop playing.
+
+![Play again](documentation/features/play-again.png)
 
 ## Technologies Used
 During this project I used multiple different technologies to help bring my idea to life, below is a list of the technologies used with a brief explanation.
@@ -93,8 +128,6 @@ Within the project I created 3 different classes for the player/s.
 The TicTacToe class was created to hold all the functions that make the game.
 * This class creates the board that the user will play on while also checking available moves on said board, as well as checking for available moves it also checks the amount of empty squres (this is to help check if the game is tied or not).
 * After the board related functions there is the function to actually make the users desired move, once each player makes their move a function to check for a winner is then run. This function will check all possible winning combonations and if either player has one of those combonations on the board this function will end the game and print out the winner to the terminal.
-
-
 
 ## Testing
 ### All testing has been done and documented in the TESTING.md file. This includes the PEP8 Validator.
