@@ -61,7 +61,7 @@ class HumanPlayer(Player):
         val = None
         while not valid_square:
             print()
-            square = input(self.letter + "'s turn. Enter move (0-8):")
+            square = input(self.letter + "'s turn. Enter move (1-9):")
             try:
                 val = int(square)
                 if val not in game.available_moves():
@@ -80,17 +80,29 @@ def htp():
 
     print("\nTic-tac-toe is a simple game, here are the basics:")
     print()
+    time.sleep(0.25)
     print("First, the board gets drawn.")
+    time.sleep(0.25)
     print("\nSecond, the first player makes their move.")
+    time.sleep(0.25)
     print("In this game the human player will always go first.")
+    time.sleep(0.25)
     print("\nNext the computer will make their move.")
+    time.sleep(0.25)
     print("\nFrom here the players keep alternating moves until")
+    time.sleep(0.25)
     print("one of the players has drawn a row of three symbols")
+    time.sleep(0.25)
     print("or until no one can win.")
+    time.sleep(0.25)
     print("\nIn the case that no one can win the game will end")
+    time.sleep(0.25)
     print("in a tie.")
+    time.sleep(0.25)
     print("\nRegardless of who wins, once the game has ended you")
+    time.sleep(0.25)
     print("can always play again!")
+    time.sleep(0.25)
 
     menu()
 
@@ -103,13 +115,21 @@ def about():
     """
 
     print("\nTic-tac-toe or noughts and crosses is a")
+    time.sleep(0.25)
     print("paper-and-pencil game for two players who take")
+    time.sleep(0.25)
     print("turns marking the spaces in a 3x3 grid with X or O.")
+    time.sleep(0.25)
     print("\nThe player who succeeds in placing three of their")
+    time.sleep(0.25)
     print("letters in a horizontal, vertical or diagonal row is")
+    time.sleep(0.25)
     print("the winner.")
+    time.sleep(0.25)
     print("\nIf neither player can place 3 in a row the game")
+    time.sleep(0.25)
     print("ends in a tie and the players can play again.")
+    time.sleep(0.25)
 
     menu()
 
@@ -144,12 +164,12 @@ def main_menu():
             play(ttt, x_player, o_player, print_game=True)
         elif choice == "2":
             clear()
-            print("\n     How to play")
+            print("\tHow to play")
             htp()
             time.sleep(1.5)
         elif choice == "3":
             clear()
-            print("\n     About")
+            print("\tAbout")
             about()
             time.sleep(1.5)
         elif choice == "4":
@@ -198,7 +218,7 @@ class TicTacToe:
     Class containing all function required to run the game
     """
     def __init__(self):
-        self.board = [' ' for _ in range(9)]   # to replicate a 3x3 board
+        self.board = [' ' for _ in range(1, 10, 1)]   # to replicate 3x3 board
         self.current_winner = None   # to keep track of the winner
 
     def reset(self):
@@ -206,7 +226,7 @@ class TicTacToe:
         function to reset the values of the following
         variables
         """
-        self.board = [' ' for _ in range(9)]
+        self.board = [' ' for _ in range(1, 10, 1)]
         self.current_winner = None
 
     # Code for the board
@@ -215,7 +235,7 @@ class TicTacToe:
         """
         Function that creates the basic board layout 3x3 square
         """
-        return [" " for _ in range(9)]
+        return [" " for _ in range(1, 10, 1)]
 
     def print_board(self):
         """
@@ -231,7 +251,7 @@ class TicTacToe:
         Function to print numbers allowing users to see
         where they can move to
         """
-        num_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
+        num_board = [[str(i+1) for i in range(j*3, (j+1)*3)] for j in range(3)]
         for row in num_board:
             print(" | " + " | ".join(row) + " | ")
 
@@ -327,6 +347,7 @@ def play(game, x_player, o_player, print_game=True):
             # check for winner
             if game.current_winner:
                 if print_game:
+                    time.sleep(1)
                     print(letter + " has won!")
                 return letter
 
