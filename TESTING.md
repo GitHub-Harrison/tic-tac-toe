@@ -49,6 +49,6 @@ While coding my project I had come across a few issues/bugs which have all been 
 
 ## Validator Testing
 * PEP8
-    * No errors were returned from [PEP8 Validator](http://pep8online.com/checkresult)
+    * No errors were returned from [PEP8 Validator](http://pep8online.com/)
 
 ![PEP8 validator](documentation/testing/validator/pep8.png)
