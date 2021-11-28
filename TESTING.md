@@ -31,7 +31,8 @@ I have manually tested this project by doing the following:
 
 Below is a video of myself playing the game to ensure it all works before my final commit.
 
-## [Final Testing Video](https://www.youtube.com/watch?v=9m8aYx8Dx_E "Tic-tac-toe Python Final Testing | Project 3")
+## [Final Testing Video](https://www.youtube.com/watch?v=9m8aYx8Dx_E)
+[![YouTube](documentation/readme/youtube-img.png)](https://www.youtube.com/watch?v=9m8aYx8Dx_E)
 
 ## Bugs
 While coding my project I had come across a few issues/bugs which have all been fixed. I took note of some of these bugs and issues through the GitHub issue tab and have linked them below.
@@ -42,7 +43,7 @@ While coding my project I had come across a few issues/bugs which have all been 
 * The final issue I encountered was relating to the [main menu function](https://github.com/GitHub-Harrison/tic-tac-toe/issues/3), which printed multiple errors to the terminal while I attempted to get it working as planned.
 
 ### Remaining Bugs
-* There are no remaining bugs.
+* There are no remaining bugs that I am aware of.
 
 ## Validator Testing
 * PEP8
