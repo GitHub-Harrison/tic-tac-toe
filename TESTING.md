@@ -3,6 +3,8 @@ Return back to the [README.md](README.md).
 
 The testing process has been broken into two sections; one section as a user to test that everything a user might want from this project works and the other from a more admin focused side in terms of making sure all functions and features work as intended.
 
+![Am I Responsive](documentation/readme/am-i-responsive.png)
+
 ## User Story Testing
 Testing user stories required me to take a user first approach to the game and think solely about what a user would want to be able to do within this game. Below are the user stories I tested for:
 
