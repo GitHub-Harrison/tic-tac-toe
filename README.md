@@ -116,6 +116,7 @@ During this project I used multiple different technologies to help bring my idea
 * [GitHub](https://github.com/) - GitHub is where all my code was stored and kept in one place.
 * [Gitpod](https://www.gitpod.io/) - Gitpod is the environment in which I did all the coding and where the code was built.
 * [Heroku](https://www.heroku.com) - Heroku was what I used to deploy the project.
+* [Git](https://git-scm.com/) - Git is a free and open source version control system which I used for version control.
 * [OBS Studio](https://obsproject.com/) - OBS is a recording/streaming software which I used to record myself doing the final tests for the project.
 
 ## Data Model
@@ -133,22 +134,22 @@ The TicTacToe class was created to hold all the functions that make the game.
 * After the board related functions there is the function to actually make the users desired move, once each player makes their move a function to check for a winner is then run. This function will check all possible winning combonations and if either player has one of those combonations on the board this function will end the game and print out the winner to the terminal.
 
 ## Testing
-### All testing has been done and documented in the TESTING.md file. This includes the PEP8 Validator.
+All testing has been done and documented in the [TESTING.md](TESTING.md) file. This includes the PEP8 Validator.
 
 ## Deployment
 This project was doployed using Code Institute's mock terminal for Heroku.
 * Steps for deployment:
-    * Sign up for a Heroku account, if you already have one just sign in.
+    * Sign up for a [Heroku](https://id.heroku.com/login) account, if you already have one just sign in.
     * Once logged into Heroku go to the dashboard.
     * Click on 'New' -> 'Create New App'.
     * Enter the app name and choose a region (for me this was tic-tac-toe-p3-python and Europe).
     * Click 'Create app'
     * From the 'Deploy' page go across to 'Settings'
     * Find 'Config Vars' and click 'Reveal Config Vars'
-    * In the 'KEY' section enter "PORT" and in the 'VALUE' section enter "8000" and click 'Add'
+    * In the `'KEY'` section enter `"PORT"` and in the `'VALUE'` section enter `"8000"` and click 'Add'
     * Now find 'Buildpacks' on the same page and click 'Add buildpack'
-    * Search for and select Python and click 'Save changes'
-    * Repeat the last two steps except this time for node.js
+    * Search for and select `python` and click 'Save changes'
+    * Repeat the last two steps except this time for `node.js`
     * Now return to the 'Deploy' page and find the 'Deployment method' section
     * Select 'GitHub' this should prompt you to login to your GitHub account
     * Once connected it will ask for a repository to connect to
@@ -156,6 +157,10 @@ This project was doployed using Code Institute's mock terminal for Heroku.
     * Click 'Connect'
     * From here you can choose either 'Manual deploy' or 'Automatic deploys'
     * To access the deployed link simply click the 'Open app' button located at the top right of your app page.
+  
+## Local Deployment
+To make a local copy of this project, you can clone it by typing in your IDE terminal:
+- `git clone https://github.com/GitHub-Harrison/tic-tac-toe.git`
 
 Alternatively, if using Gitpod, you can click below to create your own workspace using this repository.
 
