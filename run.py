@@ -61,7 +61,7 @@ class HumanPlayer(Player):
         val = None
         while not valid_square:
             print()
-            square = input(self.letter + "'s turn. Enter move (1-9): ")
+            square = input(self.letter + "'s turn. Enter move (0-8): ")
             try:
                 val = int(square)
                 if val not in game.available_moves():
@@ -218,7 +218,7 @@ class TicTacToe:
     Class containing all function required to run the game
     """
     def __init__(self):
-        self.board = [' ' for _ in range(1, 10, 1)]   # to replicate 3x3 board
+        self.board = [' ' for _ in range(9)]   # to replicate 3x3 board
         self.current_winner = None   # to keep track of the winner
 
     def reset(self):
@@ -226,7 +226,7 @@ class TicTacToe:
         function to reset the values of the following
         variables
         """
-        self.board = [' ' for _ in range(1, 10, 1)]
+        self.board = [' ' for _ in range(9)]
         self.current_winner = None
 
     # Code for the board
@@ -235,7 +235,7 @@ class TicTacToe:
         """
         Function that creates the basic board layout 3x3 square
         """
-        return [" " for _ in range(1, 10, 1)]
+        return [" " for _ in range(9)]
 
     def print_board(self):
         """
@@ -251,7 +251,7 @@ class TicTacToe:
         Function to print numbers allowing users to see
         where they can move to
         """
-        num_board = [[str(i+1) for i in range(j*3, (j+1)*3)] for j in range(3)]
+        num_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
         for row in num_board:
             print(" | " + " | ".join(row) + " | ")
 
