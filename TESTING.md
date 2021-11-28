@@ -38,9 +38,9 @@ Below is a video of myself playing the game to ensure it all works before my fin
 While coding my project I had come across a few issues/bugs which have all been fixed. I took note of some of these bugs and issues through the GitHub issue tab and have linked them below.
 
 ### Solved Bugs
-* The first bug I encountered was a [Syntax Error](https://github.com/GitHub-Harrison/tic-tac-toe/issues/1) caused by a capitalised while loop.
-* The second bug I came across was a [TypeError](https://github.com/GitHub-Harrison/tic-tac-toe/issues/2) issue where a line of code was missing 1 required positional arguement.
-* The final issue I encountered was relating to the [main menu function](https://github.com/GitHub-Harrison/tic-tac-toe/issues/3), which printed multiple errors to the terminal while I attempted to get it working as planned.
+* The first bug I encountered was a Syntax Error caused by a capitalised while loop. - **Line 32: Syntax Error** Issue [#1](https://github.com/GitHub-Harrison/tic-tac-toe/issues/1)
+* The second bug I came across was a TypeError issue where a line of code was missing 1 required positional arguement. - **TypeError: Play() missing 1 required positional argument: 'o_player'** Issue [#2](https://github.com/GitHub-Harrison/tic-tac-toe/issues/2)
+* The final issue I encountered was relating to the main menu function, which printed multiple errors to the terminal while I attempted to get it working as planned. - **Main Menu does not work as expected.** Issue [#3](https://github.com/GitHub-Harrison/tic-tac-toe/issues/3)
 
 ### Remaining Bugs
 * There are no remaining bugs that I am aware of.
