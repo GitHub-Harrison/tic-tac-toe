@@ -172,18 +172,19 @@ Throughout this project I used multiple sources to better understand the languag
 I will also be creditting Code Institute for the deployment terminal.
 
 ## Code Related Sources
-* Sources that helped me to better understand the code I used:
-    * https://stackoverflow.com/questions/13091221/reinitialize-an-object-with-self-init
-    * https://www.w3schools.com/python/ref_func_enumerate.asp
-    * https://stackoverflow.com/questions/39922967/python-determine-tic-tac-toe-winner
-    * https://stackoverflow.com/questions/18884782/typeerror-worker-takes-0-positional-arguments-but-1-was-given
-    * https://www.geeksforgeeks.org/clear-screen-python/
-    * https://stackoverflow.com/questions/19782075/how-to-stop-terminate-a-python-script-from-running/34029481#:~:text=To%20stop%20a%20running%20program,want%20to%20terminate%20the%20program.&text=Ctrl%20%2B%20Z%20should%20do%20it,caught%20in%20the%20python%20shell.
-    * https://realpython.com/python-sleep/
+| Source | Purpose |
+| --- | --- |
+| [StackOverflow](https://stackoverflow.com/questions/13091221/reinitialize-an-object-with-self-init) | Initializing an Object |
+| [W3Schools](https://www.w3schools.com/python/ref_func_enumerate.asp) | Enumeration |
+| [StackOverflow](https://stackoverflow.com/questions/39922967/python-determine-tic-tac-toe-winner) | Check for Win |
+| [StackOverflow](https://stackoverflow.com/questions/18884782/typeerror-worker-takes-0-positional-arguments-but-1-was-given) | Understand TypeError |
+| [GeeksforGeeks](https://www.geeksforgeeks.org/clear-screen-python/) | Clear function |
+| [StackOverflow](https://stackoverflow.com/questions/19782075/how-to-stop-terminate-a-python-script-from-running/34029481#:~:text=To%20stop%20a%20running%20program,want%20to%20terminate%20the%20program.&text=Ctrl%20%2B%20Z%20should%20do%20it,caught%20in%20the%20python%20shell.) | Exit Terminal |
+| [RealPython](https://realpython.com/python-sleep/) | Sleep function |
 
 ## Content Related Sources
 * As I did not create the original game Tic-tac-toe I will be creditting the wiki page for the game itself as the content for my project.
-    * https://en.wikipedia.org/wiki/Tic-tac-toe
+    * [Wikipedia](https://en.wikipedia.org/wiki/Tic-tac-toe)
 
 * The creation of my flow chart was done on the following website:
-    * https://www.lucidchart.com/pages/
+    * [Lucidchart](https://www.lucidchart.com/pages/)
