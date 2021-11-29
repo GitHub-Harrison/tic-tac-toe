@@ -33,8 +33,8 @@ I have manually tested this project by doing the following:
 
 Below is a video of myself playing the game to ensure it all works before my final commit.
 
-## [Final Testing Video](https://www.youtube.com/watch?v=9m8aYx8Dx_E)
-[![YouTube](documentation/readme/youtube-img.png)](https://www.youtube.com/watch?v=9m8aYx8Dx_E)
+## [Final Testing Video](https://youtu.be/U_kbEO-b1B4)
+[![YouTube](documentation/readme/youtube-img.png)](https://youtu.be/U_kbEO-b1B4)
 
 ## Bugs
 While coding my project I had come across a few issues/bugs which have all been fixed. I took note of some of these bugs and issues through the GitHub issue tab and have linked them below.
