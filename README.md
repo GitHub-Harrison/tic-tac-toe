@@ -1,7 +1,7 @@
 # Tic Tac Toe
 I have decided to recreate the iconic childhood game of tic-tac-toe into a Python terminal game, which will be deployed to Heroku.
 Users can try to beat the computer by trying to place 3 of their markers in a row, the board will be shown before any moves are made and after each players makes a move.
-* Link to the live version can be found [here](https://tic-tac-toe-p3-python.herokuapp.com/).
+* Link to the live version can be found [here](https://tic-tac-toe-41my.onrender.com).
 
 ![Am I Responsive](documentation/readme/am-i-responsive.png)
 
@@ -137,6 +137,9 @@ The TicTacToe class was created to hold all the functions that make the game.
 All testing has been done and documented in the [TESTING.md](TESTING.md) file. This includes the PEP8 Validator.
 
 ## Deployment
+
+## Due to Heroku suspending the free use service, I have redeployed using Render. The steps I have taken to deploy via Render will be adding in the future once I have sucessfully redeployed all projects.
+
 This project was doployed using Code Institute's mock terminal for Heroku.
 * Steps for deployment:
     * Sign up for a [Heroku](https://id.heroku.com/login) account, if you already have one just sign in.
