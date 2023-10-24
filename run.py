@@ -26,7 +26,6 @@ class Player:
         """
         for players to get their next move
         """
-        pass
 
 
 class ComputerPlayer(Player):
@@ -343,7 +342,7 @@ def play(game, x_player, o_player, print_game=True):
         if game.make_move(square, letter):
 
             if print_game:
-                print(letter + f" makes a move to square {square}")
+                print(letter + f" makes a move to square {square + 1}") # Add 1 to square to stay consistent with user input (1-9)
                 game.print_board()
                 print(" ")
 
