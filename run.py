@@ -61,9 +61,12 @@ class HumanPlayer(Player):
         val = None
         while not valid_square:
             print()
-            square = input(self.letter + "'s turn. Enter move (0-8): ")
+            square = input(self.letter + "'s turn. Enter move (1-9): ")
             try:
                 val = int(square)
+                if val < 1 or val > 9:
+                    raise ValueError
+                val -= 1 # adjust user input to 0-8 range
                 if val not in game.available_moves():
                     raise ValueError
                 valid_square = True
@@ -251,7 +254,7 @@ class TicTacToe:
         Function to print numbers allowing users to see
         where they can move to
         """
-        num_board = [[str(i) for i in range(j*3, (j+1)*3)] for j in range(3)]
+        num_board = [[str(i + 1) for i in range(j*3, (j+1)*3)] for j in range(3)]
         for row in num_board:
             print(" | " + " | ".join(row) + " | ")
 
