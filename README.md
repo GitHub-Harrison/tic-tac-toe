@@ -1,4 +1,8 @@
 # Tic Tac Toe
+
+### Update
+* I have recently adjusted how the board is numbered and the user input from 0-8 to 1-9, I believe this change was needed from a user experience perspective.
+
 I have decided to recreate the iconic childhood game of tic-tac-toe into a Python terminal game, which will be deployed to Heroku.
 Users can try to beat the computer by trying to place 3 of their markers in a row, the board will be shown before any moves are made and after each players makes a move.
 * Link to the live version can be found [here](https://tic-tac-toe-41my.onrender.com).
